@@ -4,3 +4,4 @@ Just a fun project for me to learn python and about how messaging apps work, I'm
 Argon2 is argon2-cffi (https://pypi.org/project/argon2-cffi/) by Hynek Schlawack
 Doc Links for argon2-cffi https://argon2-cffi.readthedocs.io/en/stable/
 - [ ] Add create account and login features to server
+- [ ] logging out
