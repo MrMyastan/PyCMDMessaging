@@ -26,14 +26,18 @@ def CreateOrLogin(socket):
         CreateAccount(socket)
     else:
         CreateOrLogin()
-
+        
 def Login(socket):
     socket.sendall(b'LI')
     socket.recv(8)
     loginUsername = input("Username: ")
     socket.sendall(bytes(loginUsername, 'utf-8'))
     accountPass = socket.recv(1024)
-    PH.verify(accountPass, input("Password: "))
+    try:
+        PH.verify(accountPass, input("Password: "))
+    except:
+        print("Incorrect password")
+
 
 def CreateAccount(socket):
     with socket:
